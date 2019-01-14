@@ -32,7 +32,8 @@ class ViewController: UIViewController {
         isFlipped = !isFlipped
         let fromView = isFlipped ? firstView:secondView
         let toView = isFlipped ? secondView:firstView
-        UIView.transition(from: fromView!, to: toView!, duration: 0.5, options: [.transitionFlipFromTop, .showHideTransitionViews])
+        let animationTranstion:UIView.AnimationOptions = isFlipped ? .transitionCurlUp:.transitionCurlDown
+        UIView.transition(from: fromView!, to: toView!, duration: 0.5, options: [animationTranstion, .showHideTransitionViews])
     }
 }
 
