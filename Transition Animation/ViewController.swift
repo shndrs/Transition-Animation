@@ -13,28 +13,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
     
+    private var isFlipped = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         firstViewAction()
-        secondViewAction()
+        
     }
-    
     
     func firstViewAction() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(firstViewGesture(tap:)))
-        firstView.addGestureRecognizer(tap)
-    }
-    func secondViewAction() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(secondViewGesture(tap:)))
-        secondView.addGestureRecognizer(tap)
+        let firstTap = UITapGestureRecognizer(target: self, action: #selector(firstViewGesture(tap:)))
+        let secondTap = UITapGestureRecognizer(target: self, action: #selector(firstViewGesture(tap:)))
+        firstView.addGestureRecognizer(firstTap)
+        secondView.addGestureRecognizer(secondTap)
     }
 
     @objc fileprivate func firstViewGesture(tap: UITapGestureRecognizer) {
-        UIView.transition(from: firstView, to: secondView, duration: 0.5, options: .transitionFlipFromLeft)
-    }
-
-    @objc fileprivate func secondViewGesture(tap: UITapGestureRecognizer) {
-        
+        isFlipped = !isFlipped
+        let fromView = isFlipped ? firstView:secondView
+        let toView = isFlipped ? secondView:firstView
+        UIView.transition(from: fromView!, to: toView!, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews])
     }
 }
 
