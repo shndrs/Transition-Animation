@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         isFlipped = !isFlipped
         let fromView = isFlipped ? firstView:secondView
         let toView = isFlipped ? secondView:firstView
-        UIView.transition(from: fromView!, to: toView!, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews])
+        UIView.transition(from: fromView!, to: toView!, duration: 0.5, options: [.transitionFlipFromTop, .showHideTransitionViews])
     }
 }
 

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Transition Animation-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Transition_Animation" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,16 +21,66 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG Transition Animation" translatesAutoresizingMaskIntoConstraints="NO" id="DJi-eI-dhK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6A-6f-7W1">
-                                <rect key="frame" x="37.666666666666657" y="162.33333333333334" width="300" height="487.33333333333326"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vxv-Zp-RjW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sM2-qK-Mqp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6A-6f-7W1">
+                                <rect key="frame" x="28" y="134" width="319" height="544"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIh-Bq-cme">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="487.33333333333331"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIh-Bq-cme">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="544"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_2178" translatesAutoresizingMaskIntoConstraints="NO" id="FAz-eh-9zx">
+                                                <rect key="frame" x="0.0" y="0.0" width="319" height="454"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoggie 8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sln-ra-hId">
+                                                <rect key="frame" x="0.0" y="454" width="319" height="90"/>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
+                                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="sln-ra-hId" firstAttribute="top" secondItem="FAz-eh-9zx" secondAttribute="bottom" id="AKa-J9-Sil"/>
+                                            <constraint firstItem="FAz-eh-9zx" firstAttribute="leading" secondItem="IIh-Bq-cme" secondAttribute="leading" id="K6A-7f-2vc"/>
+                                            <constraint firstAttribute="bottom" secondItem="FAz-eh-9zx" secondAttribute="bottom" constant="90" id="PGn-y9-KhU"/>
+                                            <constraint firstItem="FAz-eh-9zx" firstAttribute="top" secondItem="IIh-Bq-cme" secondAttribute="top" id="V6R-O5-IFl"/>
+                                            <constraint firstAttribute="trailing" secondItem="sln-ra-hId" secondAttribute="trailing" id="hsj-Ud-76b"/>
+                                            <constraint firstAttribute="bottom" secondItem="sln-ra-hId" secondAttribute="bottom" id="nGw-eS-uDr"/>
+                                            <constraint firstAttribute="trailing" secondItem="FAz-eh-9zx" secondAttribute="trailing" id="s5B-64-yPd"/>
+                                            <constraint firstItem="sln-ra-hId" firstAttribute="leading" secondItem="IIh-Bq-cme" secondAttribute="leading" id="wdH-vv-Zjw"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aq3-r1-KaW">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="487.33333333333331"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aq3-r1-KaW">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="544"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DSpcNHpWAAETMge" translatesAutoresizingMaskIntoConstraints="NO" id="mW6-mz-bVs">
+                                                <rect key="frame" x="0.0" y="0.0" width="319" height="454"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raptor 7 FR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtB-MD-vJo">
+                                                <rect key="frame" x="0.0" y="454" width="319" height="90"/>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
+                                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="QtB-MD-vJo" secondAttribute="trailing" id="4KO-zs-kkf"/>
+                                            <constraint firstItem="QtB-MD-vJo" firstAttribute="leading" secondItem="Aq3-r1-KaW" secondAttribute="leading" id="FJ3-Kh-e9P"/>
+                                            <constraint firstItem="mW6-mz-bVs" firstAttribute="leading" secondItem="Aq3-r1-KaW" secondAttribute="leading" id="LcT-qv-nIi"/>
+                                            <constraint firstItem="mW6-mz-bVs" firstAttribute="top" secondItem="Aq3-r1-KaW" secondAttribute="top" id="OGK-0A-P2e"/>
+                                            <constraint firstAttribute="trailing" secondItem="mW6-mz-bVs" secondAttribute="trailing" id="OLe-dW-2Ge"/>
+                                            <constraint firstAttribute="bottom" secondItem="mW6-mz-bVs" secondAttribute="bottom" constant="90" id="Wtd-ZP-Nsf"/>
+                                            <constraint firstItem="QtB-MD-vJo" firstAttribute="top" secondItem="mW6-mz-bVs" secondAttribute="bottom" id="h6n-ZZ-y16"/>
+                                            <constraint firstAttribute="bottom" secondItem="QtB-MD-vJo" secondAttribute="bottom" id="jT0-2e-EaT"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,22 +94,31 @@
                                     <constraint firstItem="Aq3-r1-KaW" firstAttribute="width" secondItem="D6A-6f-7W1" secondAttribute="width" id="bGm-so-O20"/>
                                     <constraint firstItem="Aq3-r1-KaW" firstAttribute="centerX" secondItem="D6A-6f-7W1" secondAttribute="centerX" id="pob-mQ-LUj"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="D6A-6f-7W1" firstAttribute="height" secondItem="DJi-eI-dhK" secondAttribute="height" multiplier="0.6" id="0nw-dh-koK"/>
+                            <constraint firstItem="D6A-6f-7W1" firstAttribute="height" secondItem="DJi-eI-dhK" secondAttribute="height" multiplier="0.67" id="0nw-dh-koK"/>
                             <constraint firstItem="D6A-6f-7W1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CHn-IF-XCT"/>
-                            <constraint firstItem="D6A-6f-7W1" firstAttribute="width" secondItem="DJi-eI-dhK" secondAttribute="width" multiplier="0.8" id="Dq8-AE-ee4"/>
+                            <constraint firstItem="D6A-6f-7W1" firstAttribute="width" secondItem="DJi-eI-dhK" secondAttribute="width" multiplier="0.85" id="Dq8-AE-ee4"/>
+                            <constraint firstAttribute="bottom" secondItem="vxv-Zp-RjW" secondAttribute="bottom" id="GUZ-00-pZx"/>
                             <constraint firstItem="DJi-eI-dhK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QWg-q1-Dso"/>
                             <constraint firstItem="D6A-6f-7W1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SJC-2h-npD"/>
+                            <constraint firstItem="vxv-Zp-RjW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bEV-LA-1gc"/>
+                            <constraint firstItem="vxv-Zp-RjW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="d10-jj-1pC"/>
                             <constraint firstItem="DJi-eI-dhK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="doo-G3-FL3"/>
                             <constraint firstItem="DJi-eI-dhK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l5L-ZO-w42"/>
+                            <constraint firstItem="vxv-Zp-RjW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rCm-cG-vsv"/>
                             <constraint firstAttribute="bottom" secondItem="DJi-eI-dhK" secondAttribute="bottom" id="tqY-eI-rIV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bYN-3f-LiU"/>
+                    <navigationItem key="navigationItem" title="Transition Animation" id="bYN-3f-LiU"/>
                     <connections>
                         <outlet property="firstView" destination="Aq3-r1-KaW" id="zl3-n1-Hpf"/>
                         <outlet property="secondView" destination="IIh-Bq-cme" id="b4c-aQ-iYu"/>
@@ -90,5 +149,7 @@
     </scenes>
     <resources>
         <image name="BG Transition Animation" width="1920" height="1080"/>
+        <image name="DSpcNHpWAAETMge" width="960" height="960"/>
+        <image name="IMG_2178" width="2048" height="1323"/>
     </resources>
 </document>
