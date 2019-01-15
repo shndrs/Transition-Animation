@@ -24,8 +24,8 @@ class ViewController: UIViewController {
     
     @IBAction private func nextVCButtonPressed(_ sender: UIButton) {
         
-        
-        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
+        navigationController?.present(vc, animated: true)
     }
     
     func firstViewAction() {

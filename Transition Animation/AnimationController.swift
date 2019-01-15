@@ -22,8 +22,6 @@ class AnimationController: NSObject {
         self.animationDuration = animationDuration
         self.animationMode = animationMode
     }
-    
-    
 }
 
 extension AnimationController: UIViewControllerAnimatedTransitioning {
@@ -45,14 +43,31 @@ extension AnimationController: UIViewControllerAnimatedTransitioning {
             transitionContext.containerView.addSubview(toVC.view)
             presentAnimation(with: transitionContext, viewToAnimate: toVC.view)
         case .dismiss:
-            <#code#>
+            transitionContext.containerView.addSubview(toVC.view)
+            transitionContext.containerView.addSubview(fromVC.view)
+            dismissAnimation(with: transitionContext, viewToAnimate: fromVC.view)
         }
+    }
+    
+    func dismissAnimation(with transitionContext:UIViewControllerContextTransitioning, viewToAnimate:UIView) {
+        
+        let duration = transitionDuration(using: transitionContext)
+        let transform = CGAffineTransform(translationX: -viewToAnimate.bounds.width, y: 0)
+        
+        
+        UIView.animate(withDuration: duration, delay: 0.0, options: .transitionCurlUp, animations: {
+            viewToAnimate.transform = transform
+        }) { (success) in
+            transitionContext.completeTransition(success)
+        }
+        
     }
     
     func presentAnimation(with transitionContext:UIViewControllerContextTransitioning, viewToAnimate:UIView) {
         
         viewToAnimate.clipsToBounds = true
-        viewToAnimate.transform = CGAffineTransform(scaleX: 0, y: 0)
+        viewToAnimate.transform = CGAffineTransform(translationX: 0, y: -viewToAnimate.bounds.height)
+            //CGAffineTransform(scaleX: 0, y: 0)
         
         let duration = transitionDuration(using: transitionContext)
         
@@ -61,7 +76,6 @@ extension AnimationController: UIViewControllerAnimatedTransitioning {
                        initialSpringVelocity: 0.1, options: .curveEaseInOut,
                        animations: {
                     viewToAnimate.transform = .identity
-                        //CGAffineTransform(scaleX: 1.0, y: 1.0)
                         
         }) { (success) in
             transitionContext.completeTransition(success)
@@ -69,3 +83,17 @@ extension AnimationController: UIViewControllerAnimatedTransitioning {
     }
 
 }
+
+//        UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: .calculationModeLinear, animations: {
+//
+//            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.7, animations: {
+//                viewToAnimate.transform = scaleDown
+//            })
+//
+//            UIView.addKeyframe(withRelativeStartTime: 2.0/duration, relativeDuration: 0.7, animations: {
+//                viewToAnimate.transform = scaleDown.concatenating(moveOut)
+//            })
+//
+//        }) { (success) in
+//            transitionContext.completeTransition(success)
+//        }

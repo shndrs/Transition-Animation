@@ -167,16 +167,32 @@
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQL-Qo-8Hj">
+                                <rect key="frame" x="32" y="696" width="311" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JHW-de-2E5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="CO4-mt-aKK" eventType="touchUpInside" id="KCr-DH-oMY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="IQL-Qo-8Hj" firstAttribute="leading" secondItem="fEP-w8-c3B" secondAttribute="leading" constant="32" id="2qM-hP-ah2"/>
                             <constraint firstItem="geH-Ch-2hj" firstAttribute="top" secondItem="hMp-HS-iat" secondAttribute="top" id="4Op-AK-EnA"/>
                             <constraint firstAttribute="bottom" secondItem="QZd-yf-Itt" secondAttribute="bottom" id="6xt-kE-Cfu"/>
                             <constraint firstItem="QZd-yf-Itt" firstAttribute="trailing" secondItem="fEP-w8-c3B" secondAttribute="trailing" id="JuJ-Dz-yUw"/>
+                            <constraint firstItem="fEP-w8-c3B" firstAttribute="trailing" secondItem="IQL-Qo-8Hj" secondAttribute="trailing" constant="32" id="Jya-9M-pf0"/>
                             <constraint firstItem="geH-Ch-2hj" firstAttribute="leading" secondItem="fEP-w8-c3B" secondAttribute="leading" id="bXj-ii-nvm"/>
                             <constraint firstAttribute="bottom" secondItem="geH-Ch-2hj" secondAttribute="bottom" id="bpg-LB-CcM"/>
                             <constraint firstItem="geH-Ch-2hj" firstAttribute="trailing" secondItem="fEP-w8-c3B" secondAttribute="trailing" id="evM-2c-VDM"/>
                             <constraint firstItem="QZd-yf-Itt" firstAttribute="leading" secondItem="fEP-w8-c3B" secondAttribute="leading" id="m4s-rE-vAD"/>
+                            <constraint firstItem="fEP-w8-c3B" firstAttribute="bottom" secondItem="IQL-Qo-8Hj" secondAttribute="bottom" constant="32" id="tc2-14-3ly"/>
                             <constraint firstItem="QZd-yf-Itt" firstAttribute="top" secondItem="hMp-HS-iat" secondAttribute="top" id="yl6-i0-EkM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fEP-w8-c3B"/>
