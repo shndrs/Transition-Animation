@@ -18,6 +18,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         firstViewAction()
+    }
+    
+    
+    
+    @IBAction private func nextVCButtonPressed(_ sender: UIButton) {
+        
+        
         
     }
     
@@ -33,7 +40,10 @@ class ViewController: UIViewController {
         let fromView = isFlipped ? firstView:secondView
         let toView = isFlipped ? secondView:firstView
         let animationTranstion:UIView.AnimationOptions = isFlipped ? .transitionCurlUp:.transitionCurlDown
-        UIView.transition(from: fromView!, to: toView!, duration: 0.5, options: [animationTranstion, .showHideTransitionViews])
+        UIView.transition(from: fromView!,
+                          to: toView!,
+                          duration: 0.5,
+                          options: [animationTranstion, .showHideTransitionViews, .curveEaseInOut])
     }
 }
 

@@ -100,10 +100,27 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPD-ld-lqx">
+                                <rect key="frame" x="28" y="694" width="319" height="52"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="0.95999999999999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <state key="normal" title="Next VC">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextVCButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n1i-nX-78D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="D6A-6f-7W1" firstAttribute="height" secondItem="DJi-eI-dhK" secondAttribute="height" multiplier="0.67" id="0nw-dh-koK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JPD-ld-lqx" secondAttribute="bottom" constant="32" id="3Qu-wJ-W89"/>
                             <constraint firstItem="D6A-6f-7W1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CHn-IF-XCT"/>
                             <constraint firstItem="D6A-6f-7W1" firstAttribute="width" secondItem="DJi-eI-dhK" secondAttribute="width" multiplier="0.85" id="Dq8-AE-ee4"/>
                             <constraint firstAttribute="bottom" secondItem="vxv-Zp-RjW" secondAttribute="bottom" id="GUZ-00-pZx"/>
@@ -111,8 +128,11 @@
                             <constraint firstItem="D6A-6f-7W1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SJC-2h-npD"/>
                             <constraint firstItem="vxv-Zp-RjW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bEV-LA-1gc"/>
                             <constraint firstItem="vxv-Zp-RjW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="d10-jj-1pC"/>
+                            <constraint firstItem="JPD-ld-lqx" firstAttribute="top" secondItem="D6A-6f-7W1" secondAttribute="bottom" constant="16" id="d7S-ce-aIy"/>
                             <constraint firstItem="DJi-eI-dhK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="doo-G3-FL3"/>
                             <constraint firstItem="DJi-eI-dhK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l5L-ZO-w42"/>
+                            <constraint firstItem="JPD-ld-lqx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="laZ-Fh-FcL"/>
+                            <constraint firstItem="JPD-ld-lqx" firstAttribute="width" secondItem="QtB-MD-vJo" secondAttribute="width" id="n2l-wd-sPR"/>
                             <constraint firstItem="vxv-Zp-RjW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rCm-cG-vsv"/>
                             <constraint firstAttribute="bottom" secondItem="DJi-eI-dhK" secondAttribute="bottom" id="tqY-eI-rIV"/>
                         </constraints>
@@ -127,6 +147,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="996" y="22.906403940886701"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="7Kf-j2-tiR">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="CO4-mt-aKK" customClass="SecondViewController" customModule="Transition_Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hMp-HS-iat">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DSpcNHpWAAETMge" translatesAutoresizingMaskIntoConstraints="NO" id="QZd-yf-Itt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geH-Ch-2hj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QnR-Am-vop">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="geH-Ch-2hj" firstAttribute="top" secondItem="hMp-HS-iat" secondAttribute="top" id="4Op-AK-EnA"/>
+                            <constraint firstAttribute="bottom" secondItem="QZd-yf-Itt" secondAttribute="bottom" id="6xt-kE-Cfu"/>
+                            <constraint firstItem="QZd-yf-Itt" firstAttribute="trailing" secondItem="fEP-w8-c3B" secondAttribute="trailing" id="JuJ-Dz-yUw"/>
+                            <constraint firstItem="geH-Ch-2hj" firstAttribute="leading" secondItem="fEP-w8-c3B" secondAttribute="leading" id="bXj-ii-nvm"/>
+                            <constraint firstAttribute="bottom" secondItem="geH-Ch-2hj" secondAttribute="bottom" id="bpg-LB-CcM"/>
+                            <constraint firstItem="geH-Ch-2hj" firstAttribute="trailing" secondItem="fEP-w8-c3B" secondAttribute="trailing" id="evM-2c-VDM"/>
+                            <constraint firstItem="QZd-yf-Itt" firstAttribute="leading" secondItem="fEP-w8-c3B" secondAttribute="leading" id="m4s-rE-vAD"/>
+                            <constraint firstItem="QZd-yf-Itt" firstAttribute="top" secondItem="hMp-HS-iat" secondAttribute="top" id="yl6-i0-EkM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fEP-w8-c3B"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bvn-C9-dHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1816.8" y="22.906403940886701"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AAd-GX-lTA">

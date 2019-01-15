@@ -12,6 +12,8 @@
 		2F5003CB21ECA344007418D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F5003C921ECA344007418D1 /* Main.storyboard */; };
 		2F5003CD21ECA347007418D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F5003CC21ECA347007418D1 /* Assets.xcassets */; };
 		2F5003D021ECA347007418D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F5003CE21ECA347007418D1 /* LaunchScreen.storyboard */; };
+		2F83BBD821EDACF0001F8F09 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F83BBD721EDACF0001F8F09 /* SecondViewController.swift */; };
+		2F83BBDA21EDAE42001F8F09 /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F83BBD921EDAE42001F8F09 /* AnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2F5003CC21ECA347007418D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F5003CF21ECA347007418D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F5003D121ECA347007418D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F83BBD721EDACF0001F8F09 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2F83BBD921EDAE42001F8F09 /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,12 @@
 			children = (
 				2F5003C521ECA344007418D1 /* AppDelegate.swift */,
 				2F5003C721ECA344007418D1 /* ViewController.swift */,
+				2F83BBD721EDACF0001F8F09 /* SecondViewController.swift */,
 				2F5003C921ECA344007418D1 /* Main.storyboard */,
 				2F5003CC21ECA347007418D1 /* Assets.xcassets */,
 				2F5003CE21ECA347007418D1 /* LaunchScreen.storyboard */,
 				2F5003D121ECA347007418D1 /* Info.plist */,
+				2F83BBD921EDAE42001F8F09 /* AnimationController.swift */,
 			);
 			path = "Transition Animation";
 			sourceTree = "<group>";
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F83BBDA21EDAE42001F8F09 /* AnimationController.swift in Sources */,
+				2F83BBD821EDACF0001F8F09 /* SecondViewController.swift in Sources */,
 				2F5003C821ECA344007418D1 /* ViewController.swift in Sources */,
 				2F5003C621ECA344007418D1 /* AppDelegate.swift in Sources */,
 			);
