@@ -33,6 +33,39 @@ extension AnimationController: UIViewControllerAnimatedTransitioning {
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
+        guard let toVC = transitionContext.viewController(forKey: .to),
+              let fromVC = transitionContext.viewController(forKey: .from) else {
+                transitionContext.completeTransition(false)
+                return
+        }
+        
+        switch animationMode {
+            
+        case .present:
+            transitionContext.containerView.addSubview(toVC.view)
+            presentAnimation(with: transitionContext, viewToAnimate: toVC.view)
+        case .dismiss:
+            <#code#>
+        }
+    }
+    
+    func presentAnimation(with transitionContext:UIViewControllerContextTransitioning, viewToAnimate:UIView) {
+        
+        viewToAnimate.clipsToBounds = true
+        viewToAnimate.transform = CGAffineTransform(scaleX: 0, y: 0)
+        
+        let duration = transitionDuration(using: transitionContext)
+        
+        UIView.animate(withDuration: duration, delay: 0.0,
+                       usingSpringWithDamping: 0.80,
+                       initialSpringVelocity: 0.1, options: .curveEaseInOut,
+                       animations: {
+                    viewToAnimate.transform = .identity
+                        //CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        
+        }) { (success) in
+            transitionContext.completeTransition(success)
+        }
     }
 
 }
